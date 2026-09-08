@@ -160,7 +160,7 @@ struct TodayView: View {
             Image(systemName: "scalemass.fill").foregroundStyle(.roburAccent)
             VStack(alignment: .leading) {
                 Text("\(m.weightKg.g1) kg").bold()
-                Text(days == 0 ? "Pesado hoy" : "Hace \(days) días").font(.caption).foregroundStyle(days >= profile.weighInReminderDays ? .orange : .secondary)
+                Text(days == 0 ? "Pesado hoy" : "Hace \(days) días").font(.caption).foregroundStyle(days >= profile.weighInReminderDays ? Color.orange : Color.secondary)
             }
             Spacer()
             if days >= profile.weighInReminderDays { Text("Toca pesarse").font(.caption.bold()).foregroundStyle(.orange) }
