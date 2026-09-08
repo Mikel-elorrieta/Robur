@@ -202,7 +202,7 @@ struct SetRow: View {
             Spacer()
             Button(action: onToggle) {
                 Image(systemName: set.completed ? "checkmark.circle.fill" : "circle")
-                    .font(.title2).foregroundStyle(set.completed ? .green : .secondary)
+                    .font(.title2).foregroundStyle(set.completed ? Color.green : Color.secondary)
             }.buttonStyle(.plain)
         }
         .listRowBackground(set.completed ? Color.green.opacity(0.08) : nil)
