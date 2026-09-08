@@ -172,7 +172,7 @@ struct ExerciseLibraryView: View {
         Button(action: action) {
             Text(t).font(.caption.bold()).padding(.horizontal, 10).padding(.vertical, 6)
                 .background(selected ? Color.roburAccent : Color(.tertiarySystemFill), in: Capsule())
-                .foregroundStyle(selected ? .white : .primary)
+                .foregroundStyle(selected ? Color.white : Color.primary)
         }.buttonStyle(.plain)
     }
 }
