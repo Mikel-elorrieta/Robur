@@ -17,8 +17,17 @@ jobs:
       - name: Seleccionar Xcode
         run: sudo xcode-select -s "$(ls -d /Applications/Xcode_16*.app | tail -1)" && xcodebuild -version
 
+      - name: Generar proyecto con XcodeGen
+        run: |
+          brew install xcodegen
+          rm -rf Robur.xcodeproj
+          xcodegen generate
+          xcodebuild -list -project Robur.xcodeproj
+
       - name: Archive (sin firma)
         run: |
+          set -o pipefail
+          mkdir -p build
           xcodebuild archive \
             -project Robur.xcodeproj \
             -scheme Robur \
@@ -28,7 +37,15 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
-            DEVELOPMENT_TEAM=""
+            DEVELOPMENT_TEAM="" 2>&1 | tee build/xcodebuild.log | grep -E "error:|warning: unre|BUILD|ARCHIVE" || true
+          grep -q "ARCHIVE SUCCEEDED" build/xcodebuild.log
+
+      - name: Subir log de compilación
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcodebuild-log
+          path: Robur/build/xcodebuild.log
 
       - name: Empaquetar IPA
         run: |
