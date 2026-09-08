@@ -1,0 +1,102 @@
+[
+{
+"name": "Musculación (intensidad moderada)",
+"met": 3.5
+},
+{
+"name": "Musculación (intensidad alta, poco descanso)",
+"met": 6.0
+},
+{
+"name": "Caminar (5 km/h)",
+"met": 3.5
+},
+{
+"name": "Caminar rápido (6.5 km/h)",
+"met": 5.0
+},
+{
+"name": "Correr (8 km/h)",
+"met": 8.3
+},
+{
+"name": "Correr (10 km/h)",
+"met": 9.8
+},
+{
+"name": "Correr (12 km/h)",
+"met": 11.5
+},
+{
+"name": "Bicicleta (moderado)",
+"met": 6.8
+},
+{
+"name": "Bicicleta estática (moderado)",
+"met": 6.8
+},
+{
+"name": "Bicicleta estática (intenso)",
+"met": 8.8
+},
+{
+"name": "Elíptica",
+"met": 5.0
+},
+{
+"name": "Remo (moderado)",
+"met": 7.0
+},
+{
+"name": "Remo (intenso)",
+"met": 8.5
+},
+{
+"name": "Escaladora",
+"met": 9.0
+},
+{
+"name": "Natación (moderado)",
+"met": 6.0
+},
+{
+"name": "Natación (intenso)",
+"met": 9.8
+},
+{
+"name": "Saltar a la comba",
+"met": 11.0
+},
+{
+"name": "HIIT / circuito",
+"met": 8.0
+},
+{
+"name": "Fútbol",
+"met": 7.0
+},
+{
+"name": "Baloncesto",
+"met": 6.5
+},
+{
+"name": "Pádel / tenis",
+"met": 7.3
+},
+{
+"name": "Senderismo",
+"met": 6.0
+},
+{
+"name": "Yoga",
+"met": 2.5
+},
+{
+"name": "Estiramientos",
+"met": 2.3
+},
+{
+"name": "Pilates",
+"met": 3.0
+}
+]
