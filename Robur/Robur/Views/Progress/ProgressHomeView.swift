@@ -116,7 +116,7 @@ struct MeasurementRow: View {
             Spacer()
             if let p = previous {
                 let d = m.weightKg - p.weightKg
-                Text("\(d >= 0 ? "+" : "")\(d.g1)").font(.subheadline.monospacedDigit()).foregroundStyle(d == 0 ? .secondary : (d < 0 ? .green : .orange))
+                Text("\(d >= 0 ? "+" : "")\(d.g1)").font(.subheadline.monospacedDigit()).foregroundStyle(d == 0 ? Color.secondary : (d < 0 ? Color.green : Color.orange))
             }
         }
     }
